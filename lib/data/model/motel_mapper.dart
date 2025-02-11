@@ -4,22 +4,26 @@ import 'package:guia_moteis/domain/entities/motel/motel.dart';
 
 MotelModel $MotelModelFromEntity(Motel entity) {
   return MotelModel(
-    fantasiaModel: entity.fantasia,
+    nameModel: entity.name,
     logoModel: entity.logo,
-    bairroModel: entity.bairro,
-    distanciaModel: entity.distancia,
-    qtdFavoritosModel: entity.qtdFavoritos,
+    neighborhoodModel: entity.neighborhood,
+    distanceModel: entity.distance,
+    favoriteAmountModel: entity.favoriteAmount,
+    avarageModel: entity.avarage,
+    numberReviewsModel: entity.numberReviews,
     suitesModel: entity.suites.map((e) => SuiteModel.fromEntity(e)).toList(),
   );
 }
 
 Motel $MotelModelToEntity(MotelModel model) {
   return Motel(
-    fantasia: model.fantasiaModel,
+    name: model.nameModel,
     logo: model.logoModel,
-    bairro: model.bairroModel,
-    distancia: model.distanciaModel,
-    qtdFavoritos: model.qtdFavoritosModel,
+    neighborhood: model.neighborhoodModel,
+    distance: model.distanceModel,
+    favoriteAmount: model.favoriteAmountModel,
+    avarage: model.avarageModel,
+    numberReviews: model.numberReviewsModel,
     suites: model.suitesModel.map((e) => e.toEntity()).toList(),
   );
 }

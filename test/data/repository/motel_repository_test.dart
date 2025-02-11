@@ -1,6 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:guia_moteis/data/datasource/motels_remote_datasource.dart';
-import 'package:guia_moteis/data/datasource/motels_remote_datasource_impl.dart';
 import 'package:guia_moteis/data/repository/motel_repository_impl.dart';
 import 'package:guia_moteis/domain/entities/response/response_list.dart';
 import 'package:guia_moteis/domain/repository/motel_repository.dart';

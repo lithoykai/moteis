@@ -18,7 +18,7 @@ class MotelsRemoteDatasourceImpl implements MotelsRemoteDatasource {
   Future<ResponseList<Motel>> getMotels() async {
     try {
       final _response = await _http.getMethod(Uri.parse(Endpoints.getMotel));
-      final _body = jsonDecode(_response.body);
+      final _body = jsonDecode(utf8.decode(_response.bodyBytes));
       final _data = _body['data'];
       final _moteis = (_data['moteis'] as List)
           .map((json) => MotelModel.fromJson(json).toEntity())
@@ -31,9 +31,9 @@ class MotelsRemoteDatasourceImpl implements MotelsRemoteDatasource {
       return ResponseList(
           sucess: _body["sucesso"],
           pageInfo: PageInfoResponse(
-              quantityItens: _data['qtdPorPagina'],
-              totalItens: _data['totalMoteis'],
-              maxPageItens: _data['maxPaginas']),
+              quantityItens: _data['qtdPorPagina'].toInt(),
+              totalItens: _data['totalMoteis'].toInt(),
+              maxPageItens: _data['maxPaginas'].toInt()),
           data: _moteis);
     } catch (e) {
       rethrow;

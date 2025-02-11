@@ -19,6 +19,8 @@ import '../data/datasource/motels_remote_datasource_impl.dart' as _i240;
 import '../data/repository/motel_repository_impl.dart' as _i50;
 import '../domain/repository/motel_repository.dart' as _i212;
 import '../domain/usecase/get_motels.dart' as _i452;
+import '../presentation/screens/motels/controller/motel_controller.dart'
+    as _i374;
 
 extension GetItInjectableX on _i174.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -41,6 +43,8 @@ extension GetItInjectableX on _i174.GetIt {
         datasource: gh<_i987.MotelsRemoteDatasource>()));
     gh.factory<_i452.GetMotelsUseCase>(
         () => _i452.GetMotelsUseCase(repository: gh<_i212.MotelRepository>()));
+    gh.singleton<_i374.MotelController>(() =>
+        _i374.MotelController(getMotelsUseCase: gh<_i452.GetMotelsUseCase>()));
     return this;
   }
 }

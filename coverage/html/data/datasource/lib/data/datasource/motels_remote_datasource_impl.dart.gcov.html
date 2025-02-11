@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2025-02-06 23:07:51</td>
+            <td class="headerValue">2025-02-11 11:25:07</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">-</td>
@@ -80,7 +80,7 @@
 <span id="L18"><span class="lineNum">      18</span>              :   Future&lt;ResponseList&lt;Motel&gt;&gt; getMotels() async {</span>
 <span id="L19"><span class="lineNum">      19</span>              :     try {</span>
 <span id="L20"><span class="lineNum">      20</span> <span class="tlaGNC">           3 :       final _response = await _http.getMethod(Uri.parse(Endpoints.getMotel));</span></span>
-<span id="L21"><span class="lineNum">      21</span> <span class="tlaGNC">           2 :       final _body = jsonDecode(_response.body);</span></span>
+<span id="L21"><span class="lineNum">      21</span> <span class="tlaGNC">           3 :       final _body = jsonDecode(utf8.decode(_response.bodyBytes));</span></span>
 <span id="L22"><span class="lineNum">      22</span> <span class="tlaGNC">           1 :       final _data = _body['data'];</span></span>
 <span id="L23"><span class="lineNum">      23</span> <span class="tlaGNC">           1 :       final _moteis = (_data['moteis'] as List)</span></span>
 <span id="L24"><span class="lineNum">      24</span> <span class="tlaGNC">           4 :           .map((json) =&gt; MotelModel.fromJson(json).toEntity())</span></span>
@@ -93,9 +93,9 @@
 <span id="L31"><span class="lineNum">      31</span> <span class="tlaGNC tlaBgGNC">           1 :       return ResponseList(</span></span>
 <span id="L32"><span class="lineNum">      32</span> <span class="tlaGNC">           1 :           sucess: _body[&quot;sucesso&quot;],</span></span>
 <span id="L33"><span class="lineNum">      33</span> <span class="tlaGNC">           1 :           pageInfo: PageInfoResponse(</span></span>
-<span id="L34"><span class="lineNum">      34</span> <span class="tlaGNC">           1 :               quantityItens: _data['qtdPorPagina'],</span></span>
-<span id="L35"><span class="lineNum">      35</span> <span class="tlaGNC">           1 :               totalItens: _data['totalMoteis'],</span></span>
-<span id="L36"><span class="lineNum">      36</span> <span class="tlaGNC">           1 :               maxPageItens: _data['maxPaginas']),</span></span>
+<span id="L34"><span class="lineNum">      34</span> <span class="tlaGNC">           2 :               quantityItens: _data['qtdPorPagina'].toInt(),</span></span>
+<span id="L35"><span class="lineNum">      35</span> <span class="tlaGNC">           2 :               totalItens: _data['totalMoteis'].toInt(),</span></span>
+<span id="L36"><span class="lineNum">      36</span> <span class="tlaGNC">           2 :               maxPageItens: _data['maxPaginas'].toInt()),</span></span>
 <span id="L37"><span class="lineNum">      37</span>              :           data: _moteis);</span>
 <span id="L38"><span class="lineNum">      38</span>              :     } catch (e) {</span>
 <span id="L39"><span class="lineNum">      39</span>              :       rethrow;</span>

@@ -32,12 +32,12 @@
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntryLo">50.0&nbsp;%</td>
-            <td class="headerCovTableEntry">16</td>
-            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">20</td>
+            <td class="headerCovTableEntry">10</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2025-02-06 23:07:51</td>
+            <td class="headerValue">2025-02-11 11:25:07</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">-</td>
@@ -66,25 +66,29 @@
 <span id="L4"><span class="lineNum">       4</span>              : </span>
 <span id="L5"><span class="lineNum">       5</span> <span class="tlaUNC tlaBgUNC">           0 : MotelModel $MotelModelFromEntity(Motel entity) {</span></span>
 <span id="L6"><span class="lineNum">       6</span> <span class="tlaUNC">           0 :   return MotelModel(</span></span>
-<span id="L7"><span class="lineNum">       7</span> <span class="tlaUNC">           0 :     fantasiaModel: entity.fantasia,</span></span>
+<span id="L7"><span class="lineNum">       7</span> <span class="tlaUNC">           0 :     nameModel: entity.name,</span></span>
 <span id="L8"><span class="lineNum">       8</span> <span class="tlaUNC">           0 :     logoModel: entity.logo,</span></span>
-<span id="L9"><span class="lineNum">       9</span> <span class="tlaUNC">           0 :     bairroModel: entity.bairro,</span></span>
-<span id="L10"><span class="lineNum">      10</span> <span class="tlaUNC">           0 :     distanciaModel: entity.distancia,</span></span>
-<span id="L11"><span class="lineNum">      11</span> <span class="tlaUNC">           0 :     qtdFavoritosModel: entity.qtdFavoritos,</span></span>
-<span id="L12"><span class="lineNum">      12</span> <span class="tlaUNC">           0 :     suitesModel: entity.suites.map((e) =&gt; SuiteModel.fromEntity(e)).toList(),</span></span>
-<span id="L13"><span class="lineNum">      13</span>              :   );</span>
-<span id="L14"><span class="lineNum">      14</span>              : }</span>
-<span id="L15"><span class="lineNum">      15</span>              : </span>
-<span id="L16"><span class="lineNum">      16</span> <span class="tlaGNC tlaBgGNC">           1 : Motel $MotelModelToEntity(MotelModel model) {</span></span>
-<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">           1 :   return Motel(</span></span>
-<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">           1 :     fantasia: model.fantasiaModel,</span></span>
-<span id="L19"><span class="lineNum">      19</span> <span class="tlaGNC">           1 :     logo: model.logoModel,</span></span>
-<span id="L20"><span class="lineNum">      20</span> <span class="tlaGNC">           1 :     bairro: model.bairroModel,</span></span>
-<span id="L21"><span class="lineNum">      21</span> <span class="tlaGNC">           1 :     distancia: model.distanciaModel,</span></span>
-<span id="L22"><span class="lineNum">      22</span> <span class="tlaGNC">           1 :     qtdFavoritos: model.qtdFavoritosModel,</span></span>
-<span id="L23"><span class="lineNum">      23</span> <span class="tlaGNC">           5 :     suites: model.suitesModel.map((e) =&gt; e.toEntity()).toList(),</span></span>
-<span id="L24"><span class="lineNum">      24</span>              :   );</span>
-<span id="L25"><span class="lineNum">      25</span>              : }</span>
+<span id="L9"><span class="lineNum">       9</span> <span class="tlaUNC">           0 :     neighborhoodModel: entity.neighborhood,</span></span>
+<span id="L10"><span class="lineNum">      10</span> <span class="tlaUNC">           0 :     distanceModel: entity.distance,</span></span>
+<span id="L11"><span class="lineNum">      11</span> <span class="tlaUNC">           0 :     favoriteAmountModel: entity.favoriteAmount,</span></span>
+<span id="L12"><span class="lineNum">      12</span> <span class="tlaUNC">           0 :     avarageModel: entity.avarage,</span></span>
+<span id="L13"><span class="lineNum">      13</span> <span class="tlaUNC">           0 :     numberReviewsModel: entity.numberReviews,</span></span>
+<span id="L14"><span class="lineNum">      14</span> <span class="tlaUNC">           0 :     suitesModel: entity.suites.map((e) =&gt; SuiteModel.fromEntity(e)).toList(),</span></span>
+<span id="L15"><span class="lineNum">      15</span>              :   );</span>
+<span id="L16"><span class="lineNum">      16</span>              : }</span>
+<span id="L17"><span class="lineNum">      17</span>              : </span>
+<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC tlaBgGNC">           1 : Motel $MotelModelToEntity(MotelModel model) {</span></span>
+<span id="L19"><span class="lineNum">      19</span> <span class="tlaGNC">           1 :   return Motel(</span></span>
+<span id="L20"><span class="lineNum">      20</span> <span class="tlaGNC">           1 :     name: model.nameModel,</span></span>
+<span id="L21"><span class="lineNum">      21</span> <span class="tlaGNC">           1 :     logo: model.logoModel,</span></span>
+<span id="L22"><span class="lineNum">      22</span> <span class="tlaGNC">           1 :     neighborhood: model.neighborhoodModel,</span></span>
+<span id="L23"><span class="lineNum">      23</span> <span class="tlaGNC">           1 :     distance: model.distanceModel,</span></span>
+<span id="L24"><span class="lineNum">      24</span> <span class="tlaGNC">           1 :     favoriteAmount: model.favoriteAmountModel,</span></span>
+<span id="L25"><span class="lineNum">      25</span> <span class="tlaGNC">           1 :     avarage: model.avarageModel,</span></span>
+<span id="L26"><span class="lineNum">      26</span> <span class="tlaGNC">           1 :     numberReviews: model.numberReviewsModel,</span></span>
+<span id="L27"><span class="lineNum">      27</span> <span class="tlaGNC">           5 :     suites: model.suitesModel.map((e) =&gt; e.toEntity()).toList(),</span></span>
+<span id="L28"><span class="lineNum">      28</span>              :   );</span>
+<span id="L29"><span class="lineNum">      29</span>              : }</span>
         </pre>
               </td>
             </tr>

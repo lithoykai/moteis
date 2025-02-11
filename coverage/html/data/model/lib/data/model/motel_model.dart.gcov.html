@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2025-02-06 23:07:51</td>
+            <td class="headerValue">2025-02-11 11:25:07</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">-</td>
@@ -70,43 +70,51 @@
 <span id="L8"><span class="lineNum">       8</span>              : @JsonSerializable(anyMap: true)</span>
 <span id="L9"><span class="lineNum">       9</span>              : class MotelModel extends Motel {</span>
 <span id="L10"><span class="lineNum">      10</span>              :   @JsonKey(name: 'fantasia')</span>
-<span id="L11"><span class="lineNum">      11</span>              :   final String fantasiaModel;</span>
+<span id="L11"><span class="lineNum">      11</span>              :   final String nameModel;</span>
 <span id="L12"><span class="lineNum">      12</span>              :   @JsonKey(name: 'logo')</span>
 <span id="L13"><span class="lineNum">      13</span>              :   final String logoModel;</span>
 <span id="L14"><span class="lineNum">      14</span>              :   @JsonKey(name: 'bairro')</span>
-<span id="L15"><span class="lineNum">      15</span>              :   final String bairroModel;</span>
+<span id="L15"><span class="lineNum">      15</span>              :   final String neighborhoodModel;</span>
 <span id="L16"><span class="lineNum">      16</span>              :   @JsonKey(name: 'distancia')</span>
-<span id="L17"><span class="lineNum">      17</span>              :   final double distanciaModel;</span>
+<span id="L17"><span class="lineNum">      17</span>              :   final double distanceModel;</span>
 <span id="L18"><span class="lineNum">      18</span>              :   @JsonKey(name: 'qtdFavoritos')</span>
-<span id="L19"><span class="lineNum">      19</span>              :   final int qtdFavoritosModel;</span>
+<span id="L19"><span class="lineNum">      19</span>              :   final int favoriteAmountModel;</span>
 <span id="L20"><span class="lineNum">      20</span>              :   @JsonKey(name: 'suites')</span>
 <span id="L21"><span class="lineNum">      21</span>              :   final List&lt;SuiteModel&gt; suitesModel;</span>
-<span id="L22"><span class="lineNum">      22</span>              : </span>
-<span id="L23"><span class="lineNum">      23</span> <span class="tlaGNC tlaBgGNC">           1 :   MotelModel({</span></span>
-<span id="L24"><span class="lineNum">      24</span>              :     required this.fantasiaModel,</span>
-<span id="L25"><span class="lineNum">      25</span>              :     required this.logoModel,</span>
-<span id="L26"><span class="lineNum">      26</span>              :     required this.bairroModel,</span>
-<span id="L27"><span class="lineNum">      27</span>              :     required this.distanciaModel,</span>
-<span id="L28"><span class="lineNum">      28</span>              :     required this.qtdFavoritosModel,</span>
-<span id="L29"><span class="lineNum">      29</span>              :     required this.suitesModel,</span>
-<span id="L30"><span class="lineNum">      30</span> <span class="tlaGNC">           1 :   }) : super(</span></span>
-<span id="L31"><span class="lineNum">      31</span>              :           fantasia: fantasiaModel,</span>
-<span id="L32"><span class="lineNum">      32</span>              :           logo: logoModel,</span>
-<span id="L33"><span class="lineNum">      33</span>              :           bairro: bairroModel,</span>
-<span id="L34"><span class="lineNum">      34</span>              :           distancia: distanciaModel,</span>
-<span id="L35"><span class="lineNum">      35</span>              :           qtdFavoritos: qtdFavoritosModel,</span>
-<span id="L36"><span class="lineNum">      36</span>              :           suites: suitesModel,</span>
-<span id="L37"><span class="lineNum">      37</span>              :         );</span>
-<span id="L38"><span class="lineNum">      38</span>              : </span>
-<span id="L39"><span class="lineNum">      39</span> <span class="tlaGNC">           1 :   factory MotelModel.fromJson(Map&lt;String, dynamic&gt; json) =&gt;</span></span>
-<span id="L40"><span class="lineNum">      40</span> <span class="tlaGNC">           1 :       _$MotelModelFromJson(json);</span></span>
-<span id="L41"><span class="lineNum">      41</span>              : </span>
-<span id="L42"><span class="lineNum">      42</span> <span class="tlaUNC tlaBgUNC">           0 :   Map&lt;String, dynamic&gt; toJson() =&gt; _$MotelModelToJson(this);</span></span>
-<span id="L43"><span class="lineNum">      43</span>              : </span>
-<span id="L44"><span class="lineNum">      44</span> <span class="tlaUNC">           0 :   factory MotelModel.fromEntity(Motel entity) =&gt; $MotelModelFromEntity(entity);</span></span>
-<span id="L45"><span class="lineNum">      45</span>              : </span>
-<span id="L46"><span class="lineNum">      46</span> <span class="tlaGNC tlaBgGNC">           2 :   Motel toEntity() =&gt; $MotelModelToEntity(this);</span></span>
-<span id="L47"><span class="lineNum">      47</span>              : }</span>
+<span id="L22"><span class="lineNum">      22</span>              :   @JsonKey(name: 'qtdAvaliacoes')</span>
+<span id="L23"><span class="lineNum">      23</span>              :   final int numberReviewsModel;</span>
+<span id="L24"><span class="lineNum">      24</span>              :   @JsonKey(name: 'media')</span>
+<span id="L25"><span class="lineNum">      25</span>              :   final double avarageModel;</span>
+<span id="L26"><span class="lineNum">      26</span>              : </span>
+<span id="L27"><span class="lineNum">      27</span> <span class="tlaGNC tlaBgGNC">           1 :   MotelModel({</span></span>
+<span id="L28"><span class="lineNum">      28</span>              :     required this.nameModel,</span>
+<span id="L29"><span class="lineNum">      29</span>              :     required this.logoModel,</span>
+<span id="L30"><span class="lineNum">      30</span>              :     required this.neighborhoodModel,</span>
+<span id="L31"><span class="lineNum">      31</span>              :     required this.distanceModel,</span>
+<span id="L32"><span class="lineNum">      32</span>              :     required this.favoriteAmountModel,</span>
+<span id="L33"><span class="lineNum">      33</span>              :     required this.suitesModel,</span>
+<span id="L34"><span class="lineNum">      34</span>              :     required this.numberReviewsModel,</span>
+<span id="L35"><span class="lineNum">      35</span>              :     required this.avarageModel,</span>
+<span id="L36"><span class="lineNum">      36</span> <span class="tlaGNC">           1 :   }) : super(</span></span>
+<span id="L37"><span class="lineNum">      37</span>              :           name: nameModel,</span>
+<span id="L38"><span class="lineNum">      38</span>              :           logo: logoModel,</span>
+<span id="L39"><span class="lineNum">      39</span>              :           neighborhood: neighborhoodModel,</span>
+<span id="L40"><span class="lineNum">      40</span>              :           distance: distanceModel,</span>
+<span id="L41"><span class="lineNum">      41</span>              :           favoriteAmount: favoriteAmountModel,</span>
+<span id="L42"><span class="lineNum">      42</span>              :           suites: suitesModel,</span>
+<span id="L43"><span class="lineNum">      43</span>              :           avarage: avarageModel,</span>
+<span id="L44"><span class="lineNum">      44</span>              :           numberReviews: numberReviewsModel,</span>
+<span id="L45"><span class="lineNum">      45</span>              :         );</span>
+<span id="L46"><span class="lineNum">      46</span>              : </span>
+<span id="L47"><span class="lineNum">      47</span> <span class="tlaGNC">           1 :   factory MotelModel.fromJson(Map&lt;String, dynamic&gt; json) =&gt;</span></span>
+<span id="L48"><span class="lineNum">      48</span> <span class="tlaGNC">           1 :       _$MotelModelFromJson(json);</span></span>
+<span id="L49"><span class="lineNum">      49</span>              : </span>
+<span id="L50"><span class="lineNum">      50</span> <span class="tlaUNC tlaBgUNC">           0 :   Map&lt;String, dynamic&gt; toJson() =&gt; _$MotelModelToJson(this);</span></span>
+<span id="L51"><span class="lineNum">      51</span>              : </span>
+<span id="L52"><span class="lineNum">      52</span> <span class="tlaUNC">           0 :   factory MotelModel.fromEntity(Motel entity) =&gt; $MotelModelFromEntity(entity);</span></span>
+<span id="L53"><span class="lineNum">      53</span>              : </span>
+<span id="L54"><span class="lineNum">      54</span> <span class="tlaGNC tlaBgGNC">           2 :   Motel toEntity() =&gt; $MotelModelToEntity(this);</span></span>
+<span id="L55"><span class="lineNum">      55</span>              : }</span>
         </pre>
               </td>
             </tr>

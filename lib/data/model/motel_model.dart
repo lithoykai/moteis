@@ -8,32 +8,40 @@ part 'motel_model.g.dart';
 @JsonSerializable(anyMap: true)
 class MotelModel extends Motel {
   @JsonKey(name: 'fantasia')
-  final String fantasiaModel;
+  final String nameModel;
   @JsonKey(name: 'logo')
   final String logoModel;
   @JsonKey(name: 'bairro')
-  final String bairroModel;
+  final String neighborhoodModel;
   @JsonKey(name: 'distancia')
-  final double distanciaModel;
+  final double distanceModel;
   @JsonKey(name: 'qtdFavoritos')
-  final int qtdFavoritosModel;
+  final int favoriteAmountModel;
   @JsonKey(name: 'suites')
   final List<SuiteModel> suitesModel;
+  @JsonKey(name: 'qtdAvaliacoes')
+  final int numberReviewsModel;
+  @JsonKey(name: 'media')
+  final double avarageModel;
 
   MotelModel({
-    required this.fantasiaModel,
+    required this.nameModel,
     required this.logoModel,
-    required this.bairroModel,
-    required this.distanciaModel,
-    required this.qtdFavoritosModel,
+    required this.neighborhoodModel,
+    required this.distanceModel,
+    required this.favoriteAmountModel,
     required this.suitesModel,
+    required this.numberReviewsModel,
+    required this.avarageModel,
   }) : super(
-          fantasia: fantasiaModel,
+          name: nameModel,
           logo: logoModel,
-          bairro: bairroModel,
-          distancia: distanciaModel,
-          qtdFavoritos: qtdFavoritosModel,
+          neighborhood: neighborhoodModel,
+          distance: distanceModel,
+          favoriteAmount: favoriteAmountModel,
           suites: suitesModel,
+          avarage: avarageModel,
+          numberReviews: numberReviewsModel,
         );
 
   factory MotelModel.fromJson(Map<String, dynamic> json) =>

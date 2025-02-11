@@ -31,13 +31,13 @@
             <td class="headerValue">lcov.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryLo">52.9&nbsp;%</td>
-            <td class="headerCovTableEntry">17</td>
-            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntryLo">52.2&nbsp;%</td>
+            <td class="headerCovTableEntry">23</td>
+            <td class="headerCovTableEntry">12</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2025-02-06 23:07:51</td>
+            <td class="headerValue">2025-02-11 11:25:07</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">-</td>
@@ -69,25 +69,30 @@
 <span id="L7"><span class="lineNum">       7</span>              : // **************************************************************************</span>
 <span id="L8"><span class="lineNum">       8</span>              : </span>
 <span id="L9"><span class="lineNum">       9</span> <span class="tlaGNC tlaBgGNC">           2 : MotelModel _$MotelModelFromJson(Map json) =&gt; MotelModel(</span></span>
-<span id="L10"><span class="lineNum">      10</span> <span class="tlaGNC">           1 :       fantasiaModel: json['fantasia'] as String,</span></span>
+<span id="L10"><span class="lineNum">      10</span> <span class="tlaGNC">           1 :       nameModel: json['fantasia'] as String,</span></span>
 <span id="L11"><span class="lineNum">      11</span> <span class="tlaGNC">           1 :       logoModel: json['logo'] as String,</span></span>
-<span id="L12"><span class="lineNum">      12</span> <span class="tlaGNC">           1 :       bairroModel: json['bairro'] as String,</span></span>
-<span id="L13"><span class="lineNum">      13</span> <span class="tlaGNC">           2 :       distanciaModel: (json['distancia'] as num).toDouble(),</span></span>
-<span id="L14"><span class="lineNum">      14</span> <span class="tlaGNC">           2 :       qtdFavoritosModel: (json['qtdFavoritos'] as num).toInt(),</span></span>
+<span id="L12"><span class="lineNum">      12</span> <span class="tlaGNC">           1 :       neighborhoodModel: json['bairro'] as String,</span></span>
+<span id="L13"><span class="lineNum">      13</span> <span class="tlaGNC">           2 :       distanceModel: (json['distancia'] as num).toDouble(),</span></span>
+<span id="L14"><span class="lineNum">      14</span> <span class="tlaGNC">           2 :       favoriteAmountModel: (json['qtdFavoritos'] as num).toInt(),</span></span>
 <span id="L15"><span class="lineNum">      15</span> <span class="tlaGNC">           1 :       suitesModel: (json['suites'] as List&lt;dynamic&gt;)</span></span>
 <span id="L16"><span class="lineNum">      16</span> <span class="tlaGNC">           3 :           .map((e) =&gt; SuiteModel.fromJson(e as Map))</span></span>
 <span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">           1 :           .toList(),</span></span>
-<span id="L18"><span class="lineNum">      18</span>              :     );</span>
-<span id="L19"><span class="lineNum">      19</span>              : </span>
-<span id="L20"><span class="lineNum">      20</span> <span class="tlaUNC tlaBgUNC">           0 : Map&lt;String, dynamic&gt; _$MotelModelToJson(MotelModel instance) =&gt;</span></span>
-<span id="L21"><span class="lineNum">      21</span> <span class="tlaUNC">           0 :     &lt;String, dynamic&gt;{</span></span>
-<span id="L22"><span class="lineNum">      22</span> <span class="tlaUNC">           0 :       'fantasia': instance.fantasiaModel,</span></span>
-<span id="L23"><span class="lineNum">      23</span> <span class="tlaUNC">           0 :       'logo': instance.logoModel,</span></span>
-<span id="L24"><span class="lineNum">      24</span> <span class="tlaUNC">           0 :       'bairro': instance.bairroModel,</span></span>
-<span id="L25"><span class="lineNum">      25</span> <span class="tlaUNC">           0 :       'distancia': instance.distanciaModel,</span></span>
-<span id="L26"><span class="lineNum">      26</span> <span class="tlaUNC">           0 :       'qtdFavoritos': instance.qtdFavoritosModel,</span></span>
-<span id="L27"><span class="lineNum">      27</span> <span class="tlaUNC">           0 :       'suites': instance.suitesModel,</span></span>
-<span id="L28"><span class="lineNum">      28</span>              :     };</span>
+<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">           2 :       numberReviewsModel: (json['qtdAvaliacoes'] as num).toInt(),</span></span>
+<span id="L19"><span class="lineNum">      19</span> <span class="tlaGNC">           2 :       avarageModel: (json['media'] as num).toDouble(),</span></span>
+<span id="L20"><span class="lineNum">      20</span> <span class="tlaGNC">           2 :     )..isFavorite = json['isFavorite'] as bool?;</span></span>
+<span id="L21"><span class="lineNum">      21</span>              : </span>
+<span id="L22"><span class="lineNum">      22</span> <span class="tlaUNC tlaBgUNC">           0 : Map&lt;String, dynamic&gt; _$MotelModelToJson(MotelModel instance) =&gt;</span></span>
+<span id="L23"><span class="lineNum">      23</span> <span class="tlaUNC">           0 :     &lt;String, dynamic&gt;{</span></span>
+<span id="L24"><span class="lineNum">      24</span> <span class="tlaUNC">           0 :       'isFavorite': instance.isFavorite,</span></span>
+<span id="L25"><span class="lineNum">      25</span> <span class="tlaUNC">           0 :       'fantasia': instance.nameModel,</span></span>
+<span id="L26"><span class="lineNum">      26</span> <span class="tlaUNC">           0 :       'logo': instance.logoModel,</span></span>
+<span id="L27"><span class="lineNum">      27</span> <span class="tlaUNC">           0 :       'bairro': instance.neighborhoodModel,</span></span>
+<span id="L28"><span class="lineNum">      28</span> <span class="tlaUNC">           0 :       'distancia': instance.distanceModel,</span></span>
+<span id="L29"><span class="lineNum">      29</span> <span class="tlaUNC">           0 :       'qtdFavoritos': instance.favoriteAmountModel,</span></span>
+<span id="L30"><span class="lineNum">      30</span> <span class="tlaUNC">           0 :       'suites': instance.suitesModel,</span></span>
+<span id="L31"><span class="lineNum">      31</span> <span class="tlaUNC">           0 :       'qtdAvaliacoes': instance.numberReviewsModel,</span></span>
+<span id="L32"><span class="lineNum">      32</span> <span class="tlaUNC">           0 :       'media': instance.avarageModel,</span></span>
+<span id="L33"><span class="lineNum">      33</span>              :     };</span>
         </pre>
               </td>
             </tr>

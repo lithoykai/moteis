@@ -875,11 +875,13 @@ ResponseList<Motel> fakeResponseEntity = ResponseList<Motel>(
 );
 
 Motel fakeMotel = Motel(
-  fantasia: "Motel Le Nid",
+  name: "Motel Le Nid",
   logo: "https://cdn.guiademoteis.com.br/imagens/logotipos/3148-le-nid.gif",
-  bairro: "Chácara Flora - São Paulo",
-  distancia: 28.27,
-  qtdFavoritos: 0,
+  neighborhood: "Chácara Flora - São Paulo",
+  distance: 28.27,
+  favoriteAmount: 0,
+  avarage: 4.5,
+  numberReviews: 4521,
   suites: [
     Suite(
       name: "Suíte Marselha s/ garagem privativa",
@@ -953,4 +955,71 @@ Motel fakeMotel = Motel(
       ],
     ),
   ],
+);
+
+final testMotels = [
+  Motel(
+    name: "Motel A",
+    logo: "logo.png",
+    neighborhood: "Bairro X",
+    distance: 10.0,
+    favoriteAmount: 5,
+    avarage: 4,
+    numberReviews: 1000,
+    suites: [
+      Suite(
+        name: "Suite 1",
+        quantity: 1,
+        hasAvailable: true,
+        photos: [],
+        itens: [Item(name: "TV"), Item(name: "Ar-condicionado")],
+        categoryItens: [Category(name: "Hidro", icon: "icon.png")],
+        periods: [
+          Period(
+            normalizedTime: "3 horas",
+            time: "3",
+            price: 100.0,
+            totalPrice: 80.0,
+            hasCourtesy: false,
+            promotion: Promotion(promotion: 20),
+          )
+        ],
+      )
+    ],
+  ),
+  Motel(
+    name: "Motel B",
+    logo: "logo.png",
+    neighborhood: "Bairro Y",
+    distance: 20.0,
+    favoriteAmount: 3,
+    avarage: 3,
+    numberReviews: 3222,
+    suites: [
+      Suite(
+        name: "Suite 2",
+        quantity: 0, // Sem disponibilidade
+        hasAvailable: false,
+        photos: [],
+        itens: [Item(name: "Sauna"), Item(name: "TV")],
+        categoryItens: [Category(name: "Piscina", icon: "icon.png")],
+        periods: [
+          Period(
+            normalizedTime: "3 horas",
+            time: "3",
+            price: 120.0,
+            totalPrice: 120.0,
+            hasCourtesy: false,
+            promotion: null,
+          )
+        ],
+      )
+    ],
+  ),
+];
+
+final testPageInfo = PageInfoResponse(
+  totalItens: 2,
+  maxPageItens: 1,
+  quantityItens: 2,
 );

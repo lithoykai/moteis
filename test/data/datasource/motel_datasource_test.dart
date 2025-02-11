@@ -27,7 +27,7 @@ void main() {
     test('Should return a list of data when trying to get', () async {
       final _fixture = fakeResponseHttp;
       when(mockHttp.getMethod(Uri.parse(Endpoints.getMotel))).thenAnswer(
-        (_) async => Response(jsonEncode(fakeResponseHttp), 200),
+        (_) async => Response.bytes(utf8.encode(jsonEncode(_fixture)), 200),
       );
       final _response = await dataSource.getMotels();
       expect(_response, isA<ResponseList>());
