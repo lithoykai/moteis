@@ -54,3 +54,9 @@ Para rodar os testes automatizados:
 ```sh
 flutter test
 ```
+
+## Vídeo rodando o projeto.
+
+<video width="350" controls>
+  <source src="assets/video/video.mp4" type="video/mp4">
+</video>
