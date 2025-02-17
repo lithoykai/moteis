@@ -57,6 +57,8 @@ flutter test
 
 ## Vídeo rodando o projeto.
 
+No caminho `assets/video/video.mp4`
+
 <video width="350" controls>
   <source src="assets/video/video.mp4" type="video/mp4">
 </video>
